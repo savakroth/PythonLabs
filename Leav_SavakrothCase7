@@ -1,0 +1,16 @@
+filename = input("Enter the name of the file: ").strip()
+
+Vowels = "AaEeIiOoUu"
+Consanants = "BbCcDdFfGgHhIiJjKkLlMmNnPPQqRrSsTtVvWwXxYyZz"
+countC = 0
+countV = 0
+with open(filename) as file:
+    text = file.read()
+    for V in text:
+        if V in Vowels:
+            countV += 1
+    for C in text:
+        if C in Consanants:
+            countC += 1
+
+print(f"Consanants: {countC}, Vowels: {countV}")
